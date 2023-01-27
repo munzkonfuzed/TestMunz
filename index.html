@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/661428efd9.js" crossorigin="anonymous">
+
+
+    </script>
+
+
+    <title>Mood</title>
+</head>
+
+<body>
+
+
+    <div class="menu">
+        <div class="logo" width="50px">
+            <a href="#"></a> <img src="logo.png" class="imgl" alt="" />
+
+        </div>
+
+        <div class="navigation" style="float:right;">
+
+            <ul>
+                <li><a href="#" style="margin-right:10px;">Write something</a></li>
+                <li><a href="post.html">Post's</a></li>
+
+
+            </ul>
+        </div>
+
+    </div>
+    <div>
+        <a href="#" style="text-decoration: none;margin-left: 10px;" class="changeuser">
+            <p class="changeuser" id="name" onclick="changename()"
+                style="text-decoration: none;border:1px solid white;border-radius: 50px;padding:4px;width:200px;margin-left:30px;text-align:center;text-transform: uppercase;font-size:10px;">
+                Change your Username </p>
+        </a>
+    </div>
+    <div class="cards">
+        <div class="card">
+            <h3 style="margin-top:50px;text-align: center;font-family: 'Dancing Script', cursive;display: inherit;">
+                Write something<span id="demo"></span> </h3>
+            <textarea id="w3review" name="w3review" rows="20" cols="50" style="margin-top: 50px;">  </textarea>
+            <button id="pulsante" onclick="button()">Post message</button>
+
+            <a href="https://blog.ebgram.com/blog"> <button>test</button></a>
+        </div>
+    </div>
+
+
+
+
+    <div class="spaziatura">
+    </div>
+
+    <footer style="margin-top:100%;">
+        <div class="social" style="height:100px;">
+            <hr width="auto " style="margin-top:100px;" />
+
+
+            <a href="https://www.instagram.com/munzkonfuzed/" target="_blank" style="text-decoration: none;">
+                <p style="color:white; margin-top:40px; text-align:center;"><i class="fab fa-instagram"></i>
+                    munzkonfuzed</p>
+            </a>
+
+
+
+
+        </div>
+    </footer>
+    <style>
+        #pulsante {
+            outline: none;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font: bold 12px Arial, Helvetica, sans-serif;
+            color: #fff;
+            padding: 10px 20px;
+            border: solid 1px white;
+            background: none;
+            border-radius: 10px;
+            width: 100%;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            color: white;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .cards {
+            max-width: 500px;
+            margin: 0 auto;
+            display: grid;
+            grid-gap: 1rem;
+        }
+
+        @media (min-width: 600px) {
+            .cards {
+                grid-template-columns: repeat(1, 1fr);
+
+
+            }
+
+            #pulsante {
+                text-align: center;
+            }
+
+            /*li a{
+      font-size: 10px;
+  }*/
+        }
+
+        @media(max-width:600px) {
+            li a {
+                font-size: 10px;
+            }
+
+            .changeuser {
+                text-align: center;
+            }
+        }
+
+        @media (min-width: 900px) {
+            .cards {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+
+        .imgl {
+            width: 100px;
+            height: 100px;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        ul li {
+            color: white;
+            text-decoration: none;
+            list-style: none;
+            top: 0;
+
+            margin: 10px;
+            margin-right: 10px
+        }
+
+        li a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            float: center;
+            font-family: 'Hind', sans-serif;
+        }
+
+        ul {
+            display: flex;
+            margin-top: -70px;
+            margin-right: 40px;
+        }
+
+        ul li a:hover {
+
+            color: white;
+
+
+            border: 1px solid white;
+
+            padding: 15px 32px;
+            transition: 0.5s;
+            border-radius: 10px;
+        }
+
+        .card {
+
+            color: white;
+            padding: 1rem;
+            height: 4rem;
+        }
+
+        textarea {
+            resize: none;
+            color: black;
+        }
+
+        textarea {
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+
+        .changeuser :hover {
+            color: white;
+            transition: 0, 5s;
+
+
+        }
+    </style>
+</body>
+
+
+
+</html>
+
+<script>
+
+    alert("SITO IN COSTRUZIONE");
+    var localStorage = window.localStorage;
+    var nome = localStorage.getItem("name");
+    if (nome == null) {
+        var name = window.prompt("Insert your username");
+        localStorage.setItem("name", name);
+    }
+
+    document.getElementById("demo").style.textDecoration = "underline";
+
+    function changename() {
+        localStorage.removeItem(name);
+        name = window.prompt("Insert your username");
+        document.getElementById("demo").innerHTML = "    " + name;
+    }
+
+
+
+    function button() {
+        alert("Loading ");
+    }
+
+
+    document.getElementById("demo").innerHTML = "    " + name;
+
+</script>

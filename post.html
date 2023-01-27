@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap" rel="stylesheet"> 
+
+    <script src="https://kit.fontawesome.com/661428efd9.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body >
+
+  
+    <div class="menu">
+        <div class="logo"width="50px" >
+            <a href="#"></a>  <img src="logo.png" class="imgl" alt=""/>
+        
+        </div>
+       
+        <div class="navigation" style="float:right;">
+        
+          <ul >
+                <li ><a href="index.html" style="margin-right:10px;">Write something</a></li>
+                <li><a href="post.html">Post's</a></li>
+               
+        
+            </ul>
+        </div>
+    
+
+
+ 
+        <div class="cards">
+            <div class="card" style="margin-top:30px;width:auto;height:auto;border-radius: 20px;text-align: center;padding: 10px;background-color: black;background-image:url('divsfondo.jpg');background-position:  center top;"><span id="nometest"style="text-align: center;font-family: 'Open Sans', sans-serif; font-size:35px;">Name</span>
+            
+            <p style="margin: 10px;">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aspernatur est numquam quam quo. Nam accusantium vero saepe cumque, quo ea assumenda consequatur totam aperiam reiciendis quisquam ad blanditiis beatae.
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat, cum, quidem possimus impedit suscipit et iure voluptates eligendi illo dolore deserunt, quae natus. Dicta id tempora iure aliquid numquam adipisci.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore facere ipsam repellendus est facilis! Pariatur quis, laboriosam sapiente doloremque, molestias sunt error laborum rem est odio, hic deserunt commodi voluptates.
+            </p>
+            </div>
+           
+
+        </div>
+        <footer  style="margin-top:100%;background-color: black;">
+            <div class="social" style="height:100px;">
+                <hr width="auto" style="margin-top:100px;"/>
+              
+              
+                    <a href="https://www.instagram.com/munzkonfuzed/" target="_blank"style="text-decoration: none;"><p style="color:white; margin-top:40px; text-align:center;"><i class="fab fa-instagram"></i>
+                       munzkonfuzed</p> </a>
+            
+                   
+                      
+                  
+                </div>
+            </footer>
+
+    <style>
+
+
+
+*{
+            padding:0;
+            margin:0;
+            color:white;
+        }
+        .card {
+
+  color: white;
+  padding: 1rem;
+  height: 4rem;
+}
+.cards {
+  max-width: 600px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+@media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(1, 2fr); }
+  
+}
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(4, 1fr); }
+}
+
+        body{
+           background-color:black;
+           /* background-image: url('sfondorosa.jpg');
+          
+            background-position: center right;
+    background-attachment: fixed;
+    opacity: 0,1;
+    background-repeat: no-repeat;*/
+        }
+        .imgl{
+            width:100px;
+            height:100px;
+        }
+        .logo{
+            width:150px;
+        }
+          ul  li{
+                color:white;
+                text-decoration: none;
+                list-style:none;
+                top:0;
+                
+            margin:10px;
+            margin-right:10px
+              
+            }
+            li a{
+                 color:white;
+                text-decoration: none;
+                text-transform: uppercase;
+                float :center;
+            font-family: 'Hind', sans-serif;
+            }
+            ul{
+                display:flex;
+                margin-top:-70px;
+                margin-right:40px;
+            }
+        
+            ul li a:hover{
+               
+                color:white;
+            
+                
+                border:1px solid white;
+                
+                padding:15px 32px;
+                transition:0.5s;
+                border-radius: 10px;
+            }
+            @media (min-width: 600px) {
+  .cards { grid-template-columns: repeat(1, 1fr); 
+  
+  }
+  /*li a{
+      font-size: 10px;
+  }*/
+}
+@media(max-width:600px){
+    li a{
+        font-size:10px;
+    }
+  
+}
+@media(max-width:1132px){
+    
+    body{
+        background-image: none;
+        background-color: black;
+    }
+}
+
+@media (min-width: 900px) {
+  .cards { grid-template-columns: repeat(1, 1fr); }
+}
+    </style>
+
+    <script>
+
+        var name=window.prompt("nome");
+        document.getElementById("nometest").innerHTML=name;
+    </script>
